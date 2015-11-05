@@ -7,5 +7,5 @@ A script to easily backup your ovh web hosting (This is NOT an official script)
 - Place backup.php on your webhosting
 - Visit the file in your web browser
 - Download the .tar archive from your ftp
-- * Be sure to remove the files once you're done !! *
+- **Be sure to remove the files once you're done !!**
 
