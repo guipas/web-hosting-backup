@@ -54,7 +54,7 @@
 
   
    $commande = $cmd_mysql." --host=$db_server --user=$db_username --password=$db_password -C -Q -e --default-character-set=$db_charset  $db_name    | gzip -c > $archive_GZIP ";
-   echo 'Commande : ' . $commande . '<br/>';
+   //echo 'Commande : ' . $commande . '<br/>';
 
    $CR_exec = system($commande);
 
@@ -71,7 +71,7 @@
 
    $tar_file = 'backup_file_' . $date . '_' . $heure . '.tar';
    $commande_tar = 'tar -cf ./' . $tar_file . ' .';
-   echo 'Commande : ' . $commande_tar . '<br/>';
+   //echo 'Commande : ' . $commande_tar . '<br/>';
 
    $CR_exec2 = system($commande_tar);
 
