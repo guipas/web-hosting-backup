@@ -21,6 +21,15 @@
       $db_username       = DB_USER;
       $db_password       = DB_PASSWORD;
    }
+    else if (file_exists("config/settings.inc.php")) {//prestashop ?
+      include_once("wp-config.php");
+      if(is_defined("_DB_NAME_")) {
+        $db_server         = _DB_SERVER_;
+        $db_name           = _DB_NAME_;
+        $db_username       = _DB_USER_;
+        $db_password       = _DB_PASSWD_;
+      }
+   }
    else {
       die("No database connexion detected ! ");
       
