@@ -11,15 +11,17 @@
    error_reporting(E_ALL);
 
    //wordpress ?
-   include_once("wp-config.php");
 
-   if (file_exists("wp-config.php") && defined("DB_NAME")) {
+   if (file_exists("wp-config.php")) {
       echo "Using wordpress database connexion config... <br/>";
+      include_once("wp-config.php");
       
-      $db_server         = DB_HOST;
-      $db_name           = DB_NAME;
-      $db_username       = DB_USER;
-      $db_password       = DB_PASSWORD;
+      if (defined("DB_NAME")) {
+        $db_server         = DB_HOST;
+        $db_name           = DB_NAME;
+        $db_username       = DB_USER;
+        $db_password       = DB_PASSWORD;
+      }
    }
     else if (file_exists("config/settings.inc.php")) {//prestashop ?
       echo "Using prestashop database connexion config... <br/>";
