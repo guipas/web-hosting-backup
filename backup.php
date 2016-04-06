@@ -50,7 +50,7 @@
    $date = date("Ymd");
    $heure = date("His");
    
-   $archive_GZIP = "backup_" . $date . "_". $heure . "_" . $db_charset . ".sql.gzip";
+   $archive_GZIP = "backup_" . $date . "_". $heure . "_" . $db_charset . ".sql.gz";
 
    echo "Generating database dump : <b>$archive_GZIP</b> <br/>";
 
